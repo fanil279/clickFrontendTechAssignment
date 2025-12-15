@@ -17,7 +17,7 @@ async function renderProducts() {
                 <img src="${product.image}" alt="${product.title}" />
                 <h4>${product.title}</h4>
                 <p>Price: $${product.price.toFixed(2)}</p>
-                <button>ADD TO CART</button>
+                <button>Add to cart</button>
             `;
 
             card.querySelector('button').addEventListener('click', () => {
