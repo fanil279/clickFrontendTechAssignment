@@ -21,7 +21,9 @@ async function renderProducts() {
             `;
 
             card.querySelector('button').addEventListener('click', () => {
-                window.dispatchEvent(new CustomEvent('add-to-cart', { detail: product }));
+                window.dispatchEvent(new CustomEvent('add-to-cart',
+                    { detail: { ...product, cartId: Date.now() + Math.random() } }
+                ));
             });
 
             productsList.appendChild(card);

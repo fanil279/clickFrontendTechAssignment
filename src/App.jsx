@@ -22,8 +22,8 @@ function App() {
 		return () => window.removeEventListener('add-to-cart', handleCartUpdate);
 	}, []);
 
-	const handleRemoveFromCart = (id) => {
-		setCart((cart) => cart.filter((item) => item.id !== id));
+	const handleRemoveFromCart = (cartId) => {
+		setCart((cart) => cart.filter((item) => item.cartId !== cartId));
 	};
 
 	const totalSum = cart.reduce((acc, el) => acc + el.price, 0);

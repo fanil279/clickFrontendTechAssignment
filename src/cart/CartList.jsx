@@ -4,7 +4,7 @@ const CartList = ({ cart, onRemove }) => (
     <ul>
         {cart.map((item) => (
             <CartItem
-                key={item.id}
+                key={item.cartId}
                 item={item}
                 onRemove={onRemove}
             />
