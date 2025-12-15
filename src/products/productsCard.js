@@ -11,7 +11,7 @@ async function renderProducts() {
         products.forEach((product) => {
             const card = document.createElement('div');
 
-            card.className = 'product-cart';
+            card.className = 'product-card';
 
             card.innerHTML = `
                 <img src="${product.image}" alt="${product.title}" />
